@@ -31,22 +31,21 @@ namespace gameLife
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nudResolution = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.nudDensity = new System.Windows.Forms.NumericUpDown();
-            this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.nudDensity = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudResolution = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -71,78 +70,34 @@ namespace gameLife
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Size = new System.Drawing.Size(914, 534);
             this.splitContainer1.SplitterDistance = 215;
             this.splitContainer1.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnStop
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(695, 534);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnStop.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnStop.Location = new System.Drawing.Point(23, 185);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(120, 29);
+            this.btnStop.TabIndex = 7;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // label1
+            // btnStart
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // nudResolution
-            // 
-            this.nudResolution.BackColor = System.Drawing.SystemColors.Control;
-            this.nudResolution.Location = new System.Drawing.Point(23, 56);
-            this.nudResolution.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.nudResolution.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudResolution.Name = "nudResolution";
-            this.nudResolution.Size = new System.Drawing.Size(120, 20);
-            this.nudResolution.TabIndex = 2;
-            this.nudResolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudResolution.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(20, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Density";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(20, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Resolution";
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnStart.Location = new System.Drawing.Point(23, 150);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(120, 29);
+            this.btnStart.TabIndex = 6;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // nudDensity
             // 
@@ -168,29 +123,63 @@ namespace gameLife
             0,
             0});
             // 
-            // btnStart
+            // label3
             // 
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnStart.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnStart.Location = new System.Drawing.Point(23, 150);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(120, 29);
-            this.btnStart.TabIndex = 6;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(20, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Resolution";
             // 
-            // btnStop
+            // label2
             // 
-            this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnStop.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnStop.Location = new System.Drawing.Point(23, 185);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(120, 29);
-            this.btnStop.TabIndex = 7;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Location = new System.Drawing.Point(20, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Density";
+            // 
+            // nudResolution
+            // 
+            this.nudResolution.BackColor = System.Drawing.SystemColors.Control;
+            this.nudResolution.Location = new System.Drawing.Point(23, 56);
+            this.nudResolution.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudResolution.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudResolution.Name = "nudResolution";
+            this.nudResolution.Size = new System.Drawing.Size(120, 20);
+            this.nudResolution.TabIndex = 2;
+            this.nudResolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudResolution.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(695, 534);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // timer1
             // 
@@ -212,12 +201,11 @@ namespace gameLife
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,7 +217,6 @@ namespace gameLife
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudResolution;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
