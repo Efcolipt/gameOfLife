@@ -61,7 +61,7 @@ namespace gameLife
                 for (int y = 0; y < field.GetLength(1); y++)
                 {
                     if (field[x,y])
-                        graphics.FillRectangle(Brushes.Crimson, x * resolution, y * resolution, resolution - 1, resolution - 1);
+                        graphics.FillRectangle(Brushes.Snow, x * resolution, y * resolution, resolution - 1, resolution - 1);
                 }
             }
             pictureBox1.Refresh();
